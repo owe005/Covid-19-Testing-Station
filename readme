@@ -1,0 +1,20 @@
+----------------------------
+Compulsary Assignment INF113
+----------------------------
+
+I have essentially used a lot of the skeleton code in order to get a rough idea of how program should look like, and what should be in the simulation.
+In order to be able to see what I have implemented, I have added a lot of comments where I deemed necessary, but the entire thought process was:
+
+Set some baseline variables, for example NUM_CARS which would define the amount of cars driving around. Since it is an infinite loop, while(1)
+it does lead to cars getting tested multiple times. Since this was okay, and it was easy to implement, I went with it.
+
+Then I needed a int variable to keep track of the constantly changing queue. "WaitingLine". So whenever a car enters the queue, it adds one to the queue,
+and when the testing is completed, it'll remove one from the queue.
+
+An issue I did stumble upon was assigning an id for the cars, but that was fixed by assigning an id to each car through a for loop then creating a
+pthread for each car.
+
+A really annoying issue, but not that destructive was without adding sleep functions around. Without them it would be sending maybe 4-5 lines of output every time the loop was ran, which made it really difficult to see what was going on in the output. This was fixed by adding sleep(5) which wait 5 seconds before continuing. On the testing process itself, I made it random simply because I assumed that the doctor would be testing people at different speeds.
+
+
+
